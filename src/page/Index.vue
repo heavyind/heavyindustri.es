@@ -1,8 +1,5 @@
 <template>
   <div class="page-index">
-    <trans-up-in-down-out :duration="700">
-      <h1>Home page</h1>
-    </trans-up-in-down-out>
   </div>
 </template>
 
