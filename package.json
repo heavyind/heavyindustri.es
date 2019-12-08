@@ -13,14 +13,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@heavyind/vue-bi18n": "0.1.0",
+    "@heavyind/array-utils": "0.0.3",
+    "@heavyind/vue-bi18n": "^0.2.1",
     "@heavyind/vue-trans": "0.0.6",
     "axios": "^0.19.0",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.4",
     "core-js": "^3.2.1",
     "express": "^4.17.1",
-    "hi-array-utils": "0.0.1",
     "vue": "^2.6.10"
   },
   "devDependencies": {
