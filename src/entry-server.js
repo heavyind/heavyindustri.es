@@ -7,7 +7,6 @@ export default context => {
     const { app, router, store } = createApp();
 
     if (context.cookies) {
-      console.log("There are cookies:", context.cookies);
       if (context.cookies.language) {
         store.state.bi18n.language = context.cookies.language;
       }
