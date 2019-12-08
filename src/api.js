@@ -1,16 +1,11 @@
+import axios from "axios";
 
-export const fetchPost = function (id) {
 
-  const mockPost = function (id) {
-    const post = {
-      id: id,
-      title: "Post title of post number " + id + ".",
-      body: "This is the body of post number " + id + "."
-    };
-    return post;
-  };
-
-  return new Promise((res, rej) => {
-    res(mockPost(id));
-  });
+export const setLanguage = function (language) {
+  axios.post("/options/language", { language }) ;
 };
+
+export const setAcceptCookies = (acceptCookies) => {
+  axios.post("/options/acceptCookies", { acceptCookies });
+};
+

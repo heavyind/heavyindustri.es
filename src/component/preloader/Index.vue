@@ -36,7 +36,7 @@ export default {
     transform: translate(-50%, -50%)
     &-leave-active
       opacity: 0
-      transition: opacity 0.4s linear
+      transition: opacity 0s linear
     &-leave
       opacity: 1
 </style>

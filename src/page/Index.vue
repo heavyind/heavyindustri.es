@@ -1,15 +1,20 @@
 <template>
   <div class="page-index">
+    <layout-header></layout-header>
+    <bi18n>
+      <template v-slot:en>Welcome</template>
+      <template v-slot:fr>Bienvenue</template>
+    </bi18n>
   </div>
 </template>
 
 <script>
-import TransUpInDownOut from "@/component/trans-wrapper/UpInDownOut.vue";
+import LayoutHeader from "@/component/shared/layout-header/Index.vue";
 
 export default {
   name: "page-index",
   components: {
-    TransUpInDownOut
+    LayoutHeader
   }
 };
 </script>

@@ -4,6 +4,7 @@ import { createRouter } from "@/router";
 import { createStore } from "@/store/store";
 import { sync } from "vuex-router-sync";
 import VueTrans from "@heavyind/vue-trans";
+import VueBi18n from "@heavyind/vue-bi18n";
 
 
 export const createApp = function createApp() {
@@ -13,6 +14,7 @@ export const createApp = function createApp() {
 
   sync(store, router);
   Vue.use(VueTrans, store);
+  Vue.use(VueBi18n, { store, languages: ["en", "fr"] });
 
   router.beforeEach((to, from, next) => {
     if (store.state.modal.open) { store.dispatch("modal/close"); }

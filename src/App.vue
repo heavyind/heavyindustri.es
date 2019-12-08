@@ -18,7 +18,6 @@ import { mapState, mapActions } from "vuex";
 import * as settings from "@/settings";
 import Preloader from "@/component/preloader/Index.vue";
 import Modal from "@/component/modal/Index.vue";
-import ModalDummy from "@/component/modal/component/Dummy.vue";
 import TransFadeInFadeOut from "@/component/trans-wrapper/FadeInFadeOut.vue";
 
 
@@ -46,9 +45,6 @@ export default {
     ...mapActions({
       preloadSetDone: "preload/setDone"
     }),
-    modalOpen (component) {
-      this.$store.dispatch("modal/openWith", { component: ModalDummy });
-    },
     preloadAfterEnter () {
       // Since actual app content doesn't render until preloading transition
       // out is complete, the trans module should only be initialized when 
@@ -60,7 +56,7 @@ export default {
     mountedHook () {
       // This is set to a timer for the sake of example. Change it to suit
       // your own requirements (e.g., an array of images' `onload`).
-      setTimeout(this.preloadSetDone, 500);
+      setTimeout(this.preloadSetDone, 0);
     }
   },
   watch: {

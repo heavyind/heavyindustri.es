@@ -36,6 +36,10 @@ const actions = {
     commit("open");
   },
 
+  toggle ({ commit }) {
+    commit("toggle");
+  },
+
   openWith({ commit, state }, settings) {
     commit("setSettings", settings);
     commit("open");
