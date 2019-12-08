@@ -19,7 +19,6 @@ server.use(cookieParser());
 
 
 server.post("/options/language", (req, res) => {
-  console.log("A post came in. Language:", req.body.language);
   if (req.body && req.body.language) {
     res.cookie("language", req.body.language).send("201");
   }

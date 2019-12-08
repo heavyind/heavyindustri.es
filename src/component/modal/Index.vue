@@ -51,7 +51,6 @@ export default {
   },
   methods: {
     beforeLeave () {
-      console.log("About to leave");
     },
     ...mapActions({
       close: "modal/close"
